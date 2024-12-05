@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ILDE mockup</title>
+        <meta author="Laurence Diver for the CRLP project at the Jersey LDO">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="stylesheet" href="css/styles.css">
+        <meta property="og:image" content="https://crlp-jerseyldo.github.io/ilde-mockup/ilde-social.png"/>
+        <meta property="og:title" content="Integrated Legislative Drafting Environment"/>
+        <meta property="og:description" content="A mockup of an ILDE, created by the Jersey LDO's Computer-Readable Legislation Project"/>
+    </head>
+    <body>
+        <div class="container py-4 px-3 mx-auto body-wrapper">
+            <main>
+                <div class="ui-wrapper card border-2 border-dark rounded-3 shadow">
+                    <div class="card-header py-2 border-2 border-dark position-relative title-bar">
+                        <strong class="position-absolute top-50 start-50 translate-middle text-center ui-title">Jersey LDO Integrated Legislation Drafting Environment</strong>
+                        <span class="border border-2 border-dark-subtle rounded-circle float-end mx-1"></span>
+                        <span class="border border-2 border-dark-subtle rounded-circle float-end mx-1"></span>
+                        <span class="border border-2 border-dark-subtle rounded-circle float-end mx-1"></span>
+                    </div>
+                    <div class="card-header toolbar ps-3 pe-2 py-2 position-relative">
+                        <div class="btn-toolbar p-0" role="toolbar">
+                            <div class="input-group input-group-sm btn-group" role="group">
+                                <input type="checkbox" class="btn-check" id="checkall" autocomplete="off">
+                                <label class="btn btn-secondary" for="checkall" data-bs-toggle="tooltip" data-bs-title="Toggle all highlighting" data-bs-placement="bottom"></label>
+                            </div>
+                            <div class="vr ms-2"></div>
+                            <div class="input-group input-group-sm btn-group" role="group">
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-title="Defined terms" data-bs-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#777"><path d="M168-394h42l22-62h99l22 62h43l-92-244h-44l-92 244Zm77-97 36-102h2l36 102h-74Zm319-87v-76q31-10 64-14.5t68-4.5q23 0 46.5 2.5T792-663v74q-30-7-53-10t-43-3q-34 0-67 6t-65 18Zm0 236v-76q28-9 60-14.5t72-5.5q27 0 50.5 3t45.5 8v74q-30-7-53-10t-43-3q-34 0-67 6t-65 18Zm0-118v-76q32-10 65.5-15t66.5-5q27 0 50.5 3t45.5 8v74q-26-7-49.5-10t-46.5-3q-32 0-64.5 6T564-460ZM264-288q47 0 92 12t88 30v-454q-42-22-87-33t-93-11q-37 0-73.5 6.5T120-716v452q35-13 71-18.5t73-5.5Zm252 42q43-20 88-31t92-11q37 0 73.5 4.5T840-264v-452q-35-13-71-20.5t-73-7.5q-48 0-93 11t-87 33v454Zm-36 102q-49-32-103-52t-113-20q-38 0-76 7.5T115-186q-24 10-45.5-3.5T48-229v-503q0-14 7.5-26T76-776q45-20 92-30t96-10q57 0 111.5 13.5T480-762q51-26 105-40t111-14q49 0 96 10t92 30q13 6 21 18t8 26v503q0 25-15.5 40t-32.5 7q-40-18-82.5-26t-86.5-8q-59 0-113 20t-103 52ZM282-495Z"/></svg></span>
+                                <input type="checkbox" class="btn-check toggle" id="checkdefinition" autocomplete="off" data-toggle-class="show-intdefinitions">
+                                <label class="btn btn-outline-warning" for="checkdefinition">Internal</label>
+                                <input type="checkbox" class="btn-check toggle" id="checkextdefinition" autocomplete="off" data-toggle-class="show-extdefinitions">
+                                <label class="btn" for="checkextdefinition">External</label>
+                                <input type="checkbox" class="btn-check toggle" id="checkundefined" autocomplete="off" data-toggle-class="show-undefined">
+                                <label class="btn btn-outline-secondary" for="checkundefined">Undefined</label>
+                            </div>
+                            <div class="vr ms-2"></div>
+                            <div class="input-group input-group-sm btn-group" role="group">
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-title="Semantic elements" data-bs-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#777"><path d="M600-120v-120H440v-400h-80v120H80v-320h280v120h240v-120h280v320H600v-120h-80v320h80v-120h280v320H600ZM160-760v160-160Zm520 400v160-160Zm0-400v160-160Zm0 160h120v-160H680v160Zm0 400h120v-160H680v160ZM160-600h120v-160H160v160Z"/></svg></span>
+                                <input type="checkbox" class="btn-check toggle" id="checkmust" autocomplete="off" data-toggle-class="show-must">
+                                <label class="btn btn-outline-success" for="checkmust">Must/may</label>
+                                <input type="checkbox" class="btn-check toggle" id="checkifttt" autocomplete="off" data-toggle-class="show-ifttt">
+                                <label class="btn btn-outline-info" for="checkifttt">IFTTT</label>
+                                <input type="checkbox" class="btn-check toggle" id="checkoffences" autocomplete="off" data-toggle-class="show-offences">
+                                <label class="btn btn-outline-danger" for="checkoffences">Offences</label>
+                            </div>
+                            <div class="vr ms-2"></div>
+                            <div class="input-group input-group-sm btn-group me-auto" role="group">
+                                <span class="input-group-text" data-bs-toggle="tooltip" data-bs-title="Potential issues" data-bs-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#777"><path d="M480-280q17 0 28.5-11.5T520-320q0-17-11.5-28.5T480-360q-17 0-28.5 11.5T440-320q0 17 11.5 28.5T480-280Zm-40-160h80v-240h-80v240Zm40 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span>
+                                <input type="checkbox" class="btn-check toggle" id="checkissue" autocomplete="off" data-toggle-class="show-issues">
+                                <label class="btn btn-outline-primary" for="checkissue">Issues</label>
+                            </div>
+                            <div class="d-flex input-group-sm" role="group">
+                                <a href="preview/" role="button" class="preview btn px-0" target="_blank" data-bs-toggle="tooltip" data-bs-title="HTML version" data-bs-placement="bottom">Preview</a>
+                                <div class="vr mx-2"></div>
+                                <button class="btn btn-link help " type="button" data-bs-toggle="offcanvas" data-bs-target="#help-panel" aria-controls="help-panel"><span data-bs-toggle="tooltip" data-bs-title="Help &amp; about" data-bs-placement="bottom" data-bs-offset="0,16"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#33900b"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg></span></button>
+                            </div>
+                        </div>
+
+                        <div id="help-panel" class="offcanvas offcanvas-start" tabindex="-1" aria-labelledby="helplabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="helplabel">Help &amp; about</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body small">
+                                <p class="alert alert-primary"><strong>This mockup demonstrates some of the features that a real-world <abbr title="Integrated Legislation Drafting Environment">ILDE</abbr> could have.</strong><br/><br/>
+                                The focus is on features that could aid drafters' comprehension without affecting the text itself.</p>
+                                <p>This mockup was developed as part of the <a href="https://crlp-jerseyldo.github.io" target="_blank">Computer-Readable Legislation Project</a> (CRLP) at the <a href="https://www.gov.je/Government/NonexecLegal/StatesGreffe/Pages/LegislativeDraftingOffice.aspx" target="_blank">Jersey Legislative Drafting Office</a>.</p>
+                                <p>The demo's features are described below.</p>
+                                <hr />
+                                <h6>1. Highlighting provisions</h6>
+                                <p>The buttons on the toolbar toggle various types of highlighting:</p>
+                                <ul>
+                                    <li><strong>Defined terms:</strong> including those defined in this document and those defined in other instruments</li>
+                                    <li><strong>Must/may provisions:</strong> implying the creation of a duty or a power</li>
+                                    <li><strong><abbr title="if this, then that">IFTTT</abbr> structures:</strong> logical 'if this, then that' structures</li>
+                                    <li><strong>Offences:</strong> including the <em>actus reus</em>, the terms that create the offence, and the associated penalty</li>
+                                    <li><strong>Issues:</strong> these are problems with the draft text that have been detected by the ILDE</li>
+                                </ul>
+                                <p>Some of these could be detected automatically. For example, terms defined in Article 1 could be automatically highlighted later in the document. Other elements could be manually specified by the drafter (e.g. associating a penalty with an offence, where the penalty is contained in a different provision).</p>
+                                <hr />
+                                <h6>2. Autocomplete</h6>
+                                <p>As the drafter writes text, an ILDE could detect the use of pre-defined terms and structures, and offer to insert template references or provisions (including from Common Legislative Solutions).</p>
+                                <p>To demonstrate, Articles 2(3) and 3(3) in the mockup can be edited. Typing a few characters of one of the terms defined in Article 1 will show a list of suggested terms and their definitions, which can then be inserted.</p>
+                                <p>This approach is similar to the '<a href="https://code.visualstudio.com/docs/editor/intellisense" target="_blank">Intellisense</a>' feature often found in modern software <abbr title="Integrated Development Environment">IDE</abbr>s.</p>
+                                <hr />
+                                <h6>3. 'Code lens'</h6>
+                                <p>Above each provision is a panel showing the various elements that have been detected in that provision. This can alert the drafter to aspects of the provision that might need attention.</p>
+                                <p>This approach is akin to the '<a href="https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2013/dn269218(v=vs.120)" target="_blank">code lens</a>' feature often found in modern software IDEs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-body card-body overflow-auto py-5">
+                        <div class="overflow-hidden">
+                            <h1 class="text-center my-0 mb-1"><span class="serif fw-bold">Sale of Alcohol (Jersey) Regulations 202&ndash;</span> <span class="badge bg-secondary fs-6 align-middle rounded-pill">Draft</span></h1>
+                            <p class="text-center serif mb-5">THE STATES make these Regulations under Article <mark class="issue reference">[42]<span class="badge">missing reference</span></mark> of the <a href="https://www.jerseylaw.je/laws/current/Pages/05.850.aspx" target="_blank">Tourism (Jersey) Law 1948</a> &ndash;</p>
+                            <div class="card codelens mt-3 px-3 py-2 bg-light small">
+                                <p class="m-0 text-secondary"><strong>Found:</strong> <span class="issue">1 issue</span> &bull; 4 definitions &bull; 1 external term &bull; 1 internal reference</p>
+                            </div>
+
+                            <ul id="art-1" class="provision definitions list-unstyled mt-2 mb-5 px-3 serif fs-5">
+                                <li id="art-1-wrapper"><strong>1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Interpretation</strong>
+                                    <ul class="nobullet">
+                                        <li id="art-1-1">(1) In these Regulations &mdash;
+                                            <ul class="nobullet" data-ref="Art. 1(1)">
+                                                <li id="definition-alcohol">&#8220;alcohol&#8221; means <a href="javascript:;" role="button" data-bs-toggle="popover" title="Externally defined term: “liquor”" data-bs-content="<p class='m-0 p-0'><strong class='small'><a href='https://www.jerseylaw.je/laws/current/Pages/24.660.aspx' target='_blank'>Customs and Excise (Jersey) Law 1999</a>, Art. 1(1)</strong><br/><span class='serif'>“liquor” means any liquid containing potable alcohol</span></p>" data-bs-custom-class="definition-popover-ext" class="definition ext">liquor</a> as defined in the Customs and Excise (Jersey) Law 1999;</li>
+                                                <li id="definition-commercial-operator">&#8220;commercial operator&#8221; means a body corporate that engages in business for profit but is not a public house or hotel;</li>
+                                                <li id="definition-enforcement-officer">&#8220;enforcement officer&#8221; means person appointed under <mark class="issue reference"><a href="javascript:;" class="intref">Regulation 19</a><span class="badge">missing reference</span></mark>;</li>
+                                                <li id="definition-fraud">&#8220;fraud&#8221; includes providing (whether intentionally or not) misleading information in relation to an application for a license under an enactment.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        
+                            <div class="card codelens mt-3 px-3 py-2 bg-light small">
+                                <p class="m-0 text-secondary"><strong>Found:</strong> 5 internal terms &bull; 5 external terms &bull; 1 must &bull; 1 IFTTT &bull; 1 offence &bull; 1 internal reference</p>
+                            </div>
+
+                            <ul id="art-2" class="provision body list-unstyled mt-2 mb-5 px-3 serif fs-5">
+                                <li id="art-2-wrapper"><strong>2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sale of alcohol</strong>
+                                    <ul class="nobullet">
+                                        <li id="art-2-1">(1) <mark class="must">A person must not sell alcohol<span class="badge">must</span></mark>, <mark class="ifttt op">if</mark> &mdash;
+                                            <ul class="nobullet">
+                                                <li>(a) <mark class="ifttt">the person is a commercial operator<span class="badge">necessary condition 1</span></mark>; <mark class="ifttt op">and</a></li>
+                                                <li>(b) <mark class="ifttt partial-right">the person has<span class="badge">necessary condition 2</span></mark> &mdash;
+                                                    <ul class="nobullet">
+                                                        <li>(i) <mark class="ifttt partial-left">an unspent conviction for fraud<span class="badge"><em>alternative condition 1</em></span></mark>, <mark class="ifttt op">or</mark></li>
+                                                        <li>(ii) <mark class="ifttt partial-left">an alcohol banning order<span class="badge"><em>alternative condition 2</em></span></mark>.
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li id="art-2-2">(2) <mark class="offence defn">A person who contravenes <a href="#art-2-1" class="intref">paragraph (1)</a><span class="badge">offence definition</span></mark> <mark class="offence">commits an offence<span class="badge">offence creation</span></mark> and <mark class="offence penalty">is liable to imprisonment for a term of 1 year and to a fine<span class="badge">penalty</span></mark>.</li>
+                                        <li id="art-2-3" class="editable">(3)&nbsp;[Edit me!]</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <div class="card codelens mt-3 px-3 py-2 bg-light small">
+                                <p class="m-0 text-secondary"><strong>Found:</strong> 5 internal terms &bull; 3 external terms &bull; 2 mays &bull; 2 IFTTT</p>
+                            </div>
+
+                            <ul id="art-3" class="provision body list-unstyled mt-2 mb-5 px-3 serif fs-5">
+                                <li id="art-3-wrapper"><strong>3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Misleading price lists</strong>
+                                    <ul class="nobullet">
+                                        <li id="art-3-1">(1) <mark class="must">An enforcement officer may issue a warning<span class="badge">may</span></mark> to the proprietor of premises <mark class="ifttt op">if</mark> &mdash;
+                                            <ul class="nobullet">
+                                                <li>(a) <mark class="ifttt">a price list for alcohol is displayed on the premises<span class="badge">necessary condition 1</span></mark>;</li>
+                                                <li>(b) <mark class="ifttt">the premises are registered as a hotel<span class="badge">necessary condition 2</span></mark>; <mark class="ifttt op">and</mark></li>
+                                                <li>(c) <mark class="ifttt">the enforcement officer believes that the price list is misleading to customers<span class="badge">necessary condition</span></mark>.</li>
+                                            </ul>
+                                        </li>
+                                        <li id="art-3-2">(2) <mark class="must">The enforcement officer may cancel the registration of the hotel<span class="badge">may</span></mark> <mark class="ifttt op">if</mark> <mark class="ifttt">the proprietor fails to correct the price list to the satisfaction of the enforcement officer<span class="badge">necessary condition 1</span></mark> <mark class="ifttt">within 5 days after the warning was issued<span class="badge">necessary condition 2</span></mark>.</li>
+                                        <li id="art-3-3" class="editable">(3)&nbsp;[Edit me!]</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <hr class="border-3 opacity-25" />
+
+                            <ul id="art-4" class="provision body list-unstyled mt-2 mb-5 px-3 serif fs-5">
+                                <li id="art-4-wrapper"><strong>4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="disclaimer mt-3 mb-0 text-center text-body-tertiary">NB this is an imaginary draft and does not represent any actual policy</p>
+            </main>
+        </div>
+        <script type="text/javascript" src="js/external-definitions.js"></script>
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
